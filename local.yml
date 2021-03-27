@@ -4,10 +4,10 @@
 
   tasks:
     - name: install core utilities
-        become: true
-        community.general.pacman:
-          name: base-devel git
-          state: present
+      become: true
+      community.general.pacman:
+        name: base-devel git
+        state: present
 
     - name: install Yay
       ansible.builtin.git:
