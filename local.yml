@@ -15,9 +15,9 @@
         dest: ~/yay
 
     - name: install Yay
-      ansible.builtin.shell:
+      ansible.builtin.command:
         chdir: ~/yay
-        cmd: LC_ALL=C makepkg -si --noconfirm
+        cmd: makepkg -si --noconfirm || yay -V
 
     - name: install UI packages
       become: true
