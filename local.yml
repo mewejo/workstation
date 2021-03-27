@@ -10,13 +10,11 @@
         state: present
 
     - name: clone Yay
-      become: josh
       ansible.builtin.git:
         repo: 'https://aur.archlinux.org/yay.git'
         dest: ~/yay
 
     - name: install Yay
-      become: josh
       ansible.builtin.command:
         cmd: cd ~/yay && makepkg -si
 
