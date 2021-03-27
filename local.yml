@@ -9,10 +9,12 @@
         name: base-devel git
         state: present
 
-    - name: install Yay
+    - name: clone Yay
       ansible.builtin.git:
         repo: 'https://aur.archlinux.org/yay.git'
         dest: ~/yay
+
+    - name: install Yay
       ansible.builtin.command:
         cmd: cd ~/yay && makepkg -si
 
