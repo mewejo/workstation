@@ -13,10 +13,17 @@
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: alacritty firefox noto-fonts-emoji noto-fonts-emoji sway pulseaudio otf-font-awesome ttf-croscore playerctl
+        name: sway waylock noto-fonts-emoji noto-fonts-emoji pulseaudio otf-font-awesome ttf-croscore
         state: latest
 
-    - name: install tools
+    - name: install essential tools
+      become: true
+      ignore_errors: true
+      community.general.pacman:
+        name: alacritty firefox playerctl
+        state: latest
+
+    - name: install utilities
       become: true
       community.general.pacman:
         name: virtualbox cups
@@ -31,4 +38,10 @@
       ansible.builtin.command:
         chdir: ~/yay
         cmd: makepkg -si --noconfirm
+
+    - name: enable CUPS
+      ansible.builtin.systemd:
+        enabled: yes
+        name:
+          - cups.service
 
