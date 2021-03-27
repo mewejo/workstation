@@ -15,7 +15,7 @@
         dest: ~/yay
 
     - name: install Yay
-      ansible.builtin.command:
+      ansible.builtin.shell:
         chdir: ~/yay
         cmd: makepkg -si --noconfirm
         environment:
