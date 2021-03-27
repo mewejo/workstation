@@ -18,17 +18,20 @@
       ansible.builtin.command:
         chdir: ~/yay
         cmd: makepkg -si --noconfirm
-      ignore_errors: true
 
     - name: install UI packages
       become: true
       community.general.pacman:
         name: alacritty firefox noto-fonts-emoji noto-fonts-emoji sway pulseaudio otf-font-awesome ttf-croscore cups playerctl
         state: present
+      environment:
+        LC_ALL: C
 
     - name: install tools
       become: true
       community.general.pacman:
         name: virtualbox cups
         state: present
+      environment:
+        LC_ALL: C
 
