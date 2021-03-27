@@ -13,7 +13,8 @@
       ansible.builtin.git:
         repo: 'https://aur.archlinux.org/yay.git'
         dest: ~/yay
-      ansible.builtin.command: cd ~/yay && makepkg -si
+      ansible.builtin.command:
+        cmd: cd ~/yay && makepkg -si
 
     - name: install UI packages
       become: true
