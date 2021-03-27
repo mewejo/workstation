@@ -9,16 +9,6 @@
         name: base-devel git go
         state: present
 
-    - name: clone Yay
-      ansible.builtin.git:
-        repo: 'https://aur.archlinux.org/yay.git'
-        dest: ~/yay
-
-    - name: install Yay
-      ansible.builtin.command:
-        chdir: ~/yay
-        cmd: makepkg -si --noconfirm
-
     - name: install UI packages
       become: true
       community.general.pacman:
@@ -30,4 +20,14 @@
       community.general.pacman:
         name: virtualbox cups
         state: latest
+
+    - name: clone Yay
+      ansible.builtin.git:
+        repo: 'https://aur.archlinux.org/yay.git'
+        dest: ~/yay
+
+    - name: install Yay
+      ansible.builtin.command:
+        chdir: ~/yay
+        cmd: makepkg -si --noconfirm
 
