@@ -42,6 +42,5 @@
     - name: enable CUPS
       ansible.builtin.systemd:
         enabled: yes
-        name:
-          - cups.service
+        name: cups.service
 
