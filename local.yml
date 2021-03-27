@@ -1,7 +1,7 @@
 ---
-- name: update web servers
-  hosts: all
-  remote_user: root
+- name: make Arch comfy
+  hosts: localhost
+  become: true
 
   tasks:
     - name: install UI packages
@@ -14,4 +14,3 @@
         name: virtualbox cups
         state: present
 
-          
