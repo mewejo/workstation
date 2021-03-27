@@ -13,7 +13,7 @@
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: sway waylock waybar noto-fonts-emoji noto-fonts-emoji pulseaudio otf-font-awesome ttf-croscore mako
+        name: sway xorg-xwayland waylock waybar noto-fonts-emoji noto-fonts-emoji pulseaudio otf-font-awesome ttf-croscore mako
         state: latest
 
     - name: install essential tools
