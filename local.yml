@@ -11,6 +11,7 @@
 
     - name: install UI packages
       become: true
+      ignore_errors: true
       community.general.pacman:
         name: alacritty firefox noto-fonts-emoji noto-fonts-emoji sway pulseaudio otf-font-awesome ttf-croscore playerctl
         state: latest
