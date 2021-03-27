@@ -23,11 +23,11 @@
       become: true
       community.general.pacman:
         name: alacritty firefox noto-fonts-emoji noto-fonts-emoji sway pulseaudio otf-font-awesome ttf-croscore playerctl
-        state: present
+        state: update
 
     - name: install tools
       become: true
       community.general.pacman:
         name: virtualbox cups
-        state: present
+        state: update
 
