@@ -12,7 +12,7 @@ Very empty work in progress.
 ```shell
 sudo pacman -S ansible
 cd
-git clone git@github.com:mewejo/dotfiles.git
+git clone https://github.com/mewejo/arch-linux-setup.git
 cd arch-linux-setup
 ansible-playbook local.yml -K
 ```
