@@ -16,7 +16,8 @@
 
     - name: install Yay
       ansible.builtin.command:
-        cmd: (cd ~/yay && makepkg -si)
+        chdir: ~/yay
+        cmd: makepkg -si
 
     - name: install UI packages
       become: true
