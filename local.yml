@@ -1,15 +1,28 @@
 ---
 - name: make Arch comfy
   hosts: localhost
-  become: true
 
   tasks:
+    - name: install core utilities
+        become: true
+        community.general.pacman:
+          name: base-devel git
+          state: present
+
+    - name: install Yay
+      ansible.builtin.git:
+        repo: 'https://aur.archlinux.org/yay.git'
+        dest: ~/yay
+      ansible.builtin.command: cd ~/yay && makepkg -si
+
     - name: install UI packages
+      become: true
       community.general.pacman:
         name: alacritty firefox noto-fonts-emoji noto-fonts-emoji sway pulseaudio otf-font-awesome ttf-croscore cups playerctl
         state: present
 
     - name: install tools
+      become: true
       community.general.pacman:
         name: virtualbox cups
         state: present
