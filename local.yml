@@ -6,7 +6,7 @@
     - name: install core utilities
       become: true
       community.general.pacman:
-        name: base-devel git go
+        name: base-devel git go inetutils
         state: present
 
     - name: install UI packages
