@@ -14,20 +14,20 @@
       ignore_errors: true
       community.general.pacman:
         name: sway xorg-xwayland waylock waybar noto-fonts-emoji noto-fonts-emoji pulseaudio otf-font-awesome ttf-croscore mako ttf-dejavu ttf-liberation noto-fonts
-        state: latest
+        state: present
 
     - name: install essential tools
       become: true
       ignore_errors: true
       community.general.pacman:
         name: alacritty firefox playerctl
-        state: latest
+        state: present
 
     - name: install utilities
       become: true
       community.general.pacman:
         name: virtualbox cups
-        state: latest
+        state: present
 
     - name: clone Yay
       ansible.builtin.git:
