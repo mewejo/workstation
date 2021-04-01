@@ -26,7 +26,7 @@
     - name: install utilities
       become: true
       community.general.pacman:
-        name: virtualbox cups
+        name: virtualbox cups udiskie
         state: present
 
     - name: clone Yay
