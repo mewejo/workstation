@@ -20,13 +20,13 @@
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: kitty firefox playerctl lazygit
+        name: kitty firefox playerctl lazygit wl-clipboard jq
         state: present
 
     - name: install utilities
       become: true
       community.general.pacman:
-        name: virtualbox cups udiskie nnn
+        name: virtualbox cups udiskie nnn grim slurp
         state: present
 
     - name: clone Yay
