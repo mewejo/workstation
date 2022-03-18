@@ -6,27 +6,58 @@
     - name: install core utilities
       become: true
       community.general.pacman:
-        name: base-devel git go inetutils
+        name: 
+          - base-devel
+          - git
+          - go
+          - inetutils
         state: present
+        update_cache: true
 
     - name: install UI packages
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: sway swayidle xorg-xwayland waylock waybar noto-fonts-emoji noto-fonts-emoji pulseaudio otf-font-awesome ttf-croscore mako ttf-dejavu ttf-liberation noto-fonts
+        name: 
+          - sway
+          - swayidle
+          - xorg-xwayland 
+          - waylock 
+          - waybar 
+          - noto-fonts-emoji 
+          - noto-fonts-emoji 
+          - otf-font-awesome 
+          - ttf-croscore 
+          - mako 
+          - ttf-dejavu 
+          - ttf-liberation 
+          - noto-fonts
         state: present
 
     - name: install essential tools
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: kitty firefox playerctl lazygit wl-clipboard jq
+        name: 
+          - kitty 
+          - firefox 
+          - playerctl 
+          - lazygit 
+          - wl-clipboard
+          - jq
         state: present
 
     - name: install utilities
       become: true
       community.general.pacman:
-        name: virtualbox cups udiskie nnn grim slurp wofi
+        name: 
+          - virtualbox 
+          - cups 
+          - udiskie 
+          - nnn 
+          - grim 
+          - slurp 
+          - wofi
         state: present
 
     - name: clone Yay
@@ -39,16 +70,12 @@
         chdir: ~/yay
         cmd: makepkg -si --noconfirm
 
-    - name: enable CUPS
-      ansible.builtin.systemd:
-        enabled: yes
-        name: cups.service
-
     - name: install daily apps
       become: true
       ignore_errors: true
       community.general.pacman:
-        name: thunderbird
+        name: 
+          - thunderbird
         state: present
 
 

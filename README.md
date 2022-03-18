@@ -17,6 +17,8 @@ cd arch-linux-setup
 ansible-playbook local.yml -K
 ```
 
+Optionally enable CUPS
+
 ## After .ssh files are loaded up
 
 Sets up dotfile repo
