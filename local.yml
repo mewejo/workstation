@@ -58,6 +58,8 @@
           - grim 
           - slurp 
           - wofi
+          - php
+          - chromium
         state: present
 
     - name: clone Yay
