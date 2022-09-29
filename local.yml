@@ -22,7 +22,7 @@
           - sway
           - swayidle
           - xorg-xwayland 
-          - waylock 
+          - swaylock 
           - waybar 
           - noto-fonts-emoji 
           - noto-fonts-emoji 
