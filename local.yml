@@ -45,6 +45,7 @@
           - lazygit 
           - wl-clipboard
           - jq
+          - wireguard-tools
         state: present
 
     - name: install utilities
@@ -60,6 +61,7 @@
           - wofi
           - php
           - chromium
+          - fish
         state: present
 
     - name: clone Yay
