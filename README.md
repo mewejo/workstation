@@ -10,7 +10,7 @@ Very empty work in progress.
 ## Ansible
 
 ```shell
-sudo pacman -S ansible
+sudo pacman -S ansible git
 cd
 git clone https://github.com/mewejo/arch-linux-setup.git
 cd arch-linux-setup
