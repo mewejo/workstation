@@ -84,6 +84,12 @@
         name: 
           - thunderbird
         state: present
-
+    - name: setup services
+      become: true
+      ansible.builtin.systemd:
+        name: systemd-resolved
+        state: started
+        enabled: yes
+        
 
 
