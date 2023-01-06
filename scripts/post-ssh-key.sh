@@ -7,3 +7,4 @@ dotfiles checkout;
 dotfiles push --set-upstream origin master;
 systemctl enable ssh-agent --user;
 ~/.scripts/sway/wallpaper.php
+chsh -s $(which fish)
