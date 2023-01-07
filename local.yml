@@ -102,5 +102,8 @@
         name: josh
         groups: docker
         append: yes        
-
+    - name: clone cornwall council tools
+      ansible.builtin.git:
+        repo: 'https://github.com/mewejo/cornwall-council.git'
+        dest: /home/josh/cornwall-council
 
