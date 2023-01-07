@@ -97,6 +97,10 @@
         name: docker
         state: started
         enabled: yes
-        
+    - name: adding user to groups
+      user:
+        name: josh
+        groups: docker
+        append: yes        
 
 
