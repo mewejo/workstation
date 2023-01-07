@@ -12,6 +12,7 @@
           - go
           - inetutils
           - systemd-resolvconf
+          - docker
         state: present
         update_cache: true
 
@@ -84,10 +85,16 @@
         name: 
           - thunderbird
         state: present
-    - name: setup services
+    - name: enable systemd-resolved
       become: true
       ansible.builtin.systemd:
         name: systemd-resolved
+        state: started
+        enabled: yes
+    - name: enable docker
+      become: true
+      ansible.builtin.systemd:
+        name: docker
         state: started
         enabled: yes
         
