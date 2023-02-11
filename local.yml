@@ -35,6 +35,7 @@
           - ttf-dejavu 
           - ttf-liberation 
           - noto-fonts
+          - xdg-desktop-portal-wlr
         state: present
 
     - name: install essential tools
