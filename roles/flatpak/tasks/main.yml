@@ -30,6 +30,7 @@
 - name: Install Flathub packages
   community.general.flatpak:
     remote: flathub
+    method: user
     name:
       - org.mozilla.firefox
       - org.mozilla.thunderbird
