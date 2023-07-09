@@ -1,0 +1,12 @@
+---
+- name: Flatpak repositories
+  community.general.flatpak_remote:
+    - name: Flathub
+      state: present
+      flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      method: user
+
+    - name: Fedora
+      state: present
+      flatpakrepo_url: oci+https://registry.fedoraproject.org
+      method: user
