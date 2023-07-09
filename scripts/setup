@@ -7,7 +7,7 @@ echo "What is this system's hostname? Something poisonous, I hope."
 read -e -p "Hostname: " -i $(hostname) hostname
 
 echo "Setting hostname to $hostname"
-sudo echo $hostname > /etc/hostname
+echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 echo "The hostname has been set!"
 
