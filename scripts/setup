@@ -1,10 +1,10 @@
 #!/bin/bash
+set -e
 
 echo "Setting up the battle station..."
 echo "What is this system's hostname? Something poisonous, I hope."
-echo -n "Hostname: "
 
-read hostname
+read -e -p "Hostname: " -i $(hostname) hostname
 
 echo "Setting hostname to $hostname"
 echo $hostname > /etc/hostname
@@ -20,6 +20,5 @@ echo "Kicking Ansible off..."
 
 ansible-playbook -K workstation.yml -l $hostname
 
-echo "Ansible has finished its work. Rebooting..."
+echo "Ansible has finished its work. Cut the power..."
 
-#reboot
