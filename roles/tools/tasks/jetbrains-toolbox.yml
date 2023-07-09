@@ -1,6 +1,6 @@
 ---
 - name: "Install JetBrains Toolbox"
-  ansible.builtin.command:
+  ansible.builtin.shell:
     cmd: "curl -s -L https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.tar.gz | tar -xzvO jetbrains-toolbox-1.28.1.15219/jetbrains-toolbox > /home/josh/bin/jetbrains"
 
 - name: "Make JetBrains Toolbox executable"
