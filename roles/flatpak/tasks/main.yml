@@ -1,5 +1,5 @@
 ---
-- name: Flatpak repositories
+- name: "Flatpak repositories"
   community.general.flatpak_remote:
     - name: Flathub
       state: present
