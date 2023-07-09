@@ -1,6 +1,7 @@
 ---
 - name: "Remove Gnome Flatpaks"
   ignore_errors: yes
+  become: yes
   community.general.flatpak:
     state: absent
     method: system
