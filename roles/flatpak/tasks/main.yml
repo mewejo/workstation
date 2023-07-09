@@ -12,3 +12,17 @@
       state: present
       flatpakrepo_url: oci+https://registry.fedoraproject.org
       method: user
+
+- name: "Remove System Fedora Flatpak repository"
+  become: yes
+  community.general.flatpak_remote:
+    name: fedora
+    state: absent
+    method: system
+
+- name: "Remove System Flathub repository"
+  become: yes
+  community.general.flatpak_remote:
+    name: flathub
+    state: absent
+    method: system
