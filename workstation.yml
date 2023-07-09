@@ -6,5 +6,8 @@
     - rpm-ostree
     - user
     - flatpak
+    - services
+    - tools
+    - ide
 
 

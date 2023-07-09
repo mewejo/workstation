@@ -1,0 +1,5 @@
+---
+- name: "Clone Cornwall Council tools"
+  ansible.builtin.git:
+    repo: 'https://github.com/mewejo/cornwall-council.git'
+    dest: /home/josh/cornwall-council

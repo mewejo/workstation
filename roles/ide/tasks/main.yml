@@ -1,0 +1,12 @@
+---
+- name: Create personal dev directory
+  ansible.builtin.file:
+    path: /home/josh/Development/Personal
+    state: directory
+    mode: '0755'
+
+- name: Create Grizzlyware dev directory
+  ansible.builtin.file:
+    path: /home/josh/Development/Grizzlyware
+    state: directory
+    mode: '0755'
