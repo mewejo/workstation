@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "Setting up the battle station..."
+echo "What is this system's hostname? Something poisonous, I hope."
+echo -n "Hostname: "
+
+read hostname
+
+echo "Setting hostname to $hostname"
+echo $hostname > /etc/hostname
+hostname $hostname
+echo "The hostname has been set!"
+
+echo "Installing Ansible..."
+
+rpm-ostree install ansible
+rpm-ostree ex apply-live
+
+echo "Kicking Ansible off..."
+
+ansible-playbook -K workstation.yml -l $hostname
+
+echo "Ansible has finished its work. Rebooting..."
+
+#reboot
