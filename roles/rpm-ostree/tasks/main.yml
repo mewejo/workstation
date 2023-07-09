@@ -30,3 +30,8 @@
       - wireguard-tools
       - jq
 
+- name: "Apply rpm-ostree changes live"
+  become: yes
+  ansible.builtin.command:
+    cmd: rpm-ostree ex apply-live
+
