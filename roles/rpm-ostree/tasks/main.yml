@@ -1,0 +1,32 @@
+---
+- name: "Install packages"
+  become: yes
+  community.general.rpm_ostree_pkg:
+    state: present
+    name:
+      - vim
+      - ansible
+      - podman
+      - docker
+      - docker-compose
+      - git
+      - htop
+      - iotop
+      - wl-clipboard
+      - sway
+      - kitty
+      - swaybg
+      - swayidle
+      - swaylock 
+      - waybar 
+      - xdg-desktop-portal-wlr 
+      - mako 
+      - udiskie 
+      - grim 
+      - slurp 
+      - wofi
+      - fish
+      - playerctl
+      - wireguard-tools
+      - jq
+

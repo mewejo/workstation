@@ -1,0 +1,9 @@
+---
+- name: "Set up workstation"
+  hosts: workstation
+  connection: "local"
+  roles:
+    - rpm-ostree
+    - user
+
+

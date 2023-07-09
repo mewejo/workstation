@@ -1,0 +1,8 @@
+---
+- name: "config: Update user shell"
+  become: yes
+  ansible.builtin.user:
+    name: josh 
+    shell: "/usr/bin/fish"
+
+
