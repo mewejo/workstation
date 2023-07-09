@@ -1,12 +1,7 @@
 ---
-- name: Remove base packages
+- name: Remove Firefox
   become: yes
   notify:
     - "rpm-ostree apply-live"
-  community.general.rpm_ostree_pkg:
-    state: absent
-    name:
-      - gnome-software-rpm-ostree
-      - gnome-software
-      - firefox
-      - gnome-shell
+  ansible.builtin.command:
+    cmd: rpm-ostree override remove firefox firefox-langpacks
