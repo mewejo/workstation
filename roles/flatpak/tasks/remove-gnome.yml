@@ -1,8 +1,8 @@
 ---
 - name: "Remove Gnome Flatpaks"
+  ignore_errors: yes
   community.general.flatpak:
     state: absent
-    ignore_errors: yes
     method: system
     name:
       - org.gnome.Boxes
