@@ -6,6 +6,7 @@
     shell: "/usr/bin/fish"
 
 - name: "Add user to Groups"
+  become: yes
   user:
     name: josh
     groups: docker
