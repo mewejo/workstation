@@ -34,3 +34,6 @@
     name:
       - org.mozilla.firefox
       - org.mozilla.Thunderbird
+
+- name: Remove Gnome
+  import_tasks: remove-gnome.yml
