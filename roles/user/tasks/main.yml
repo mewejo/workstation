@@ -1,5 +1,5 @@
 ---
-- name: "config: Update user shell"
+- name: "Update user shell"
   become: yes
   ansible.builtin.user:
     name: josh 
