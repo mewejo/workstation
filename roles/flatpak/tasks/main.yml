@@ -28,12 +28,7 @@
     method: system
 
 - name: Install Flathub packages
-  community.general.flatpak:
-    remote: flathub
-    method: user
-    name:
-      - org.mozilla.firefox
-      - org.mozilla.Thunderbird
+  import_tasks: install-apps.yml
 
 - name: Remove Gnome
   import_tasks: remove-gnome.yml

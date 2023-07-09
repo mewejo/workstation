@@ -1,0 +1,13 @@
+---
+- name: Install Flathub packages
+  community.general.flatpak:
+    remote: flathub
+    method: user
+    name:
+      - org.mozilla.firefox
+      - org.mozilla.Thunderbird
+      - com.slack.Slack
+      - com.spotify.Client
+      - com.discordapp.Discord
+
+
