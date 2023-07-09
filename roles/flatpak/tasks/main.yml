@@ -27,9 +27,9 @@
     state: absent
     method: system
 
-- name: Install Flatpak packages
+- name: Install Flathub packages
   community.general.flatpak:
-    remote: flatpak
+    remote: flathub
     name:
       - org.mozilla.firefox
       - org.mozilla.thunderbird
