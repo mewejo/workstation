@@ -33,4 +33,5 @@
       - jq
       - snapper
 
-
+- name: Remove base packages
+  import_tasks: remove-base-packages.yml
