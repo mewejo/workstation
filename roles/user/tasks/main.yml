@@ -12,3 +12,10 @@
     groups: docker
     append: yes
 
+- name: "Create bin directory"
+  become: yes
+  ansible.builtin.file:
+    path: /home/josh/bin
+    state: directory
+    mode: '0755'
+

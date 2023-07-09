@@ -3,3 +3,6 @@
   ansible.builtin.git:
     repo: 'https://github.com/mewejo/cornwall-council.git'
     dest: /home/josh/cornwall-council
+
+- name: "Jetbrains Toolbox"
+  include_tasks: jetbrains-toolbox.yml
