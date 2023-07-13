@@ -39,3 +39,16 @@
     path: /home/josh/.ssh/authorized_keys
     state: file
     mode: '0644'
+
+- name: "Setup dotfiles"
+  import_tasks: dotfiles.yml
+
+- name: "Initiate wallpaper"
+  ansible.builtin.shell:
+    cmd: "/home/josh/.scripts/sway/wallpaper.php"
+
+- name: "GPG sign all Git commits"
+  community.general.git_config:
+    name: commit.gpgsign
+    value: true
+    scope: global
