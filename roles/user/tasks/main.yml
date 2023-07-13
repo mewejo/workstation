@@ -24,3 +24,18 @@
     state: directory
     mode: '0755'
 
+- name: "Create .ssh directory"
+  ansible.builtin.file:
+      path: /home/josh/.ssh
+      state: directory
+      mode: '0700'
+
+- name: "Import SSH keys"
+  ansible.builtin.command:
+    cmd: "curl https://github.com/mewejo.keys >> /home/josh/.ssh/authorized_keys"
+
+- name: "Set authorized_keys permissions"
+  ansible.builtin.file:
+    path: /home/josh/.ssh/authorized_keys
+    state: file
+    mode: '0644'
