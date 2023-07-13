@@ -10,7 +10,7 @@ else
   exit 1
 fi
 
-if [ -d "/home/josh/.dotfiles"]; then
+if [ -d "/home/josh/.dotfiles" ]; then
   echo "Dotfiles found, skipping clone..."
 else
   echo "Cloning dotfiles..."
