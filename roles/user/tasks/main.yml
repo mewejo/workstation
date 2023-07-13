@@ -31,7 +31,7 @@
       mode: '0700'
 
 - name: "Import SSH keys"
-  ansible.builtin.command:
+  ansible.builtin.shell:
     cmd: "curl https://github.com/mewejo.keys >> /home/josh/.ssh/authorized_keys"
 
 - name: "Set authorized_keys permissions"
