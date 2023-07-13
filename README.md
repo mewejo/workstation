@@ -1,5 +1,5 @@
 # Workstation provisioning
 
 ```bash
-./scripts/setup
+curl -sL setup.bonfield.me | bash
 ```
