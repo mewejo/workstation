@@ -3,6 +3,8 @@ set -e
 
 cd ~;
 
+rm -rf workstation || true;
+
 git clone https://github.com/mewejo/workstation.git workstation;
 
 echo "Now run:"
