@@ -5,3 +5,10 @@
       name: docker
       enabled: yes
       state: started
+
+- name: "Enable SSH"
+  become: yes
+  systemd:
+      name: sshd
+      enabled: yes
+      state: started
