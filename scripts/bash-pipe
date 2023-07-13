@@ -3,7 +3,7 @@ set -e
 
 cd ~;
 
-git clone git@github.com:mewejo/workstation.git workstation;
+git clone https://github.com/mewejo/workstation.git workstation;
 
 cd workstation;
 
