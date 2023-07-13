@@ -14,7 +14,7 @@ echo "The hostname has been set!"
 echo "Installing Ansible..."
 
 rpm-ostree install ansible || true
-rpm-ostree ex apply-live || true
+sudo rpm-ostree ex apply-live || true
 
 echo "Kicking Ansible off..."
 
