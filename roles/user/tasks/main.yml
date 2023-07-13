@@ -5,6 +5,12 @@
     name: josh 
     shell: "/usr/bin/fish"
 
+- name: "Create Docker group"
+  become: yes
+  ansible.builtin.group:
+    name: docker
+    state: present
+
 - name: "Add user to Groups"
   become: yes
   user:
