@@ -48,7 +48,7 @@
 - name: "Initiate wallpaper"
   when: dotfiles_exist.stat.exists
   ansible.builtin.shell:
-    cmd: "/home/josh/.scripts/sway/set-wallpaper"
+    cmd: "/home/josh/.scripts/sway/choose-wallpaper"
 
 - name: "GPG sign all Git commits"
   community.general.git_config:
