@@ -40,10 +40,17 @@
     state: file
     mode: '0644'
 
-- name: "Setup dotfiles"
+- name: "Determine if dotfiles are installed"
+  register: dotfiles_exist
+  stat:
+    path: /home/josh/.dotfiles
+
+- name: "Configure dotfiles"
   import_tasks: dotfiles.yml
+  when: dotfiles_exist.stat.exists
 
 - name: "Initiate wallpaper"
+  when: dotfiles_exist.stat.exists
   ansible.builtin.shell:
     cmd: "/home/josh/.scripts/sway/wallpaper.php"
 

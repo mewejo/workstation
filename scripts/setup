@@ -2,6 +2,30 @@
 set -e
 
 echo "Setting up the battle station..."
+
+if [ -f "/home/josh/.ssh/id_rsa" ]; then
+    echo "SSH key found, continuing..."
+else
+  echo "SSH key not found, exiting..."
+  exit 1
+fi
+
+if [ -d "/home/josh/.dotfiles"]; then
+  echo "Dotfiles found, skipping clone..."
+else
+  echo "Cloning dotfiles..."
+
+  cd ~;
+
+  git clone --bare git@github.com:mewejo/dotfiles.git $HOME/.dotfiles;
+  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  dotfiles config --local status.showUntrackedFiles no;
+  dotfiles checkout;
+  dotfiles push --set-upstream origin master;
+
+  echo "Dotfiles setup!"
+fi
+
 echo "What is this system's hostname? Something poisonous, I hope."
 
 read -e -p "Hostname: " -i $(hostname) hostname
@@ -11,10 +35,13 @@ echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 echo "The hostname has been set!"
 
-echo "Installing Ansible..."
+if ! command -v ansible-playbook &> /dev/null
+then
+  echo "Installing Ansible..."
 
-rpm-ostree install ansible || true
-sudo rpm-ostree ex apply-live || true
+  rpm-ostree install ansible || true
+  sudo rpm-ostree ex apply-live || true
+fi
 
 echo "Kicking Ansible off..."
 
