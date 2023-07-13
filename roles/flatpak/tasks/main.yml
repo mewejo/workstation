@@ -30,5 +30,3 @@
 - name: Install Flathub packages
   import_tasks: install-apps.yml
 
-- name: Remove Gnome
-  import_tasks: remove-gnome.yml

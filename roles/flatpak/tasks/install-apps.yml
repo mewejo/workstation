@@ -4,7 +4,6 @@
     remote: flathub
     method: user
     name:
-      - org.mozilla.firefox
       - org.mozilla.Thunderbird
       - com.slack.Slack
       - com.spotify.Client

@@ -1,8 +1,0 @@
----
-- name: Remove Firefox
-  become: yes
-  ignore_errors: yes
-  notify:
-    - "rpm-ostree apply-live"
-  ansible.builtin.command:
-    cmd: rpm-ostree override remove firefox firefox-langpacks
