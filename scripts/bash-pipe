@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+cd ~;
+
+git clone git@github.com:mewejo/workstation.git workstation;
+
+cd workstation;
+
+./scripts/setup;
+
+
