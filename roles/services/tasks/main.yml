@@ -14,7 +14,6 @@
       state: started
 
 - name: "Enable SSH Agent"
-  become: yes
   systemd:
       name: ssh-agent
       enabled: yes
