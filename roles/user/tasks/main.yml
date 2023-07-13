@@ -45,10 +45,6 @@
   stat:
     path: /home/josh/.dotfiles
 
-- name: "Configure dotfiles"
-  import_tasks: dotfiles.yml
-  when: dotfiles_exist.stat.exists
-
 - name: "Initiate wallpaper"
   when: dotfiles_exist.stat.exists
   ansible.builtin.shell:
