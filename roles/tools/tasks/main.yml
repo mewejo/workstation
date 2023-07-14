@@ -6,3 +6,6 @@
 
 - name: "Jetbrains Toolbox"
   include_tasks: jetbrains-toolbox.yml
+
+- name: "Lazygit"
+  include_tasks: lazygit.yml

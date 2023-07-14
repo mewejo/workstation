@@ -1,0 +1,9 @@
+---
+- name: "Install Lazygit"
+  ansible.builtin.shell:
+    cmd: "curl -s -L https://github.com/jesseduffield/lazygit/releases/download/v0.38.2/lazygit_0.38.2_Linux_x86_64.tar.gz | tar -xzvO lazygit > /home/josh/bin/lazygit"
+
+- name: "Make Lazygit executable"
+  ansible.builtin.file:
+    path: /home/josh/bin/lazygit
+    mode: '0755'
