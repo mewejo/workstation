@@ -8,5 +8,6 @@
       - com.slack.Slack
       - com.spotify.Client
       - com.discordapp.Discord
+      - org.libreoffice.LibreOffice
 
 
