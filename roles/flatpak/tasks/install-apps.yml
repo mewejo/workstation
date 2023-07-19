@@ -9,5 +9,6 @@
       - com.spotify.Client
       - com.discordapp.Discord
       - org.libreoffice.LibreOffice
+      - org.chromium.Chromium
 
 
