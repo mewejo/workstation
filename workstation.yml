@@ -3,6 +3,7 @@
   hosts: workstation
   connection: "local"
   roles:
+    - system
     - rpm-ostree
     - user
     - flatpak
