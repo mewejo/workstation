@@ -11,11 +11,17 @@
     name: docker
     state: present
 
+- name: "Create libvirt group"
+  become: yes
+  ansible.builtin.group:
+    name: libvirt
+    state: present
+
 - name: "Add user to Groups"
   become: yes
   user:
     name: josh
-    groups: docker
+    groups: docker libvirt
     append: yes
 
 - name: "Create bin directory"
