@@ -2,7 +2,7 @@
 - name: "Add libvirt polkit rule"
   become: yes
   copy:
-    src: "{{ playbook_dir }}/files/80-libvirt.rules"
+    src: "{{ playbook_dir }}/support/polkit-rules/80-libvirt.rules"
     dest: /etc/polkit-1/rules.d/80-libvirt.rules
     owner: root
     group: root
