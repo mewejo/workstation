@@ -5,4 +5,7 @@
     policy: targeted
     state: permissive
 
+- name: Setup polkit rules
+  import_tasks: polkit-rules.yml
+
 
