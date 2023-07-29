@@ -11,6 +11,7 @@
       - podman
       - docker
       - docker-compose
+      - virt-manager
       - git
       - htop
       - iotop
