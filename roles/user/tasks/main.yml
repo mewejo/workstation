@@ -21,7 +21,9 @@
   become: yes
   user:
     name: josh
-    groups: docker libvirt
+    groups:
+      - docker
+      - libvirt
     append: yes
 
 - name: "Create bin directory"
