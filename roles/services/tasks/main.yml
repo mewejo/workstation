@@ -13,9 +13,3 @@
       enabled: yes
       state: started
 
-- name: "Enable SSH Agent"
-  systemd:
-      name: ssh-agent
-      enabled: yes
-      state: started
-      scope: user
