@@ -13,3 +13,11 @@
       enabled: yes
       state: started
 
+- name: "Enable Snapper"
+  become: yes
+  systemd:
+      name: "snapper-timeline.timer"
+      enabled: yes
+      state: started
+
+      
