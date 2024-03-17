@@ -10,5 +10,6 @@
       - com.discordapp.Discord
       - org.libreoffice.LibreOffice
       - org.chromium.Chromium
+      - org.subsurface_divelog.Subsurface
 
 
